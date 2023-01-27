@@ -18,6 +18,10 @@ public class Main {
         while (m.find()) {
             sequences.add(m.group());
         }
-        System.out.println(input+"/n"+sequences);
+
+        FileWriter writer = new FileWriter("my-output.txt");
+        writer.write(sequences.toString());
+        writer.close();
+
     }
 }
